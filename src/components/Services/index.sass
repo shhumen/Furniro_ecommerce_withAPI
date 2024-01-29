@@ -1,0 +1,15 @@
+.services
+  background-color: $pink-gold
+  width: 100%
+
+  .service
+    img
+      @include width(50px,50px)
+      margin: 5px
+    h2
+      @include font-style(20px, $semiBold)
+      color: $dark
+
+    p
+      color: var(--color-gray-3, #898989)
+      @include font-style(15px, $semiBold)

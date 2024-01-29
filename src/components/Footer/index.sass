@@ -1,0 +1,57 @@
+.footer
+  border-top: 1px solid rgba(0, 0, 0, 0.17)
+
+  .logo
+    p
+      @include font-style(24px, $bold)
+      color: $black
+
+    span
+      @include font-style(16px, $regular)
+      color: $grey
+
+  .links, .faq, .news
+    p
+      @include font-style(16px, $medium)
+      color: $grey
+
+    ul
+      list-style: none
+      padding: 0
+
+      li
+        @include font-style(16px, $medium)
+        margin: 40px 0
+
+        a
+          text-decoration: none
+          color: $black
+          transition: ease-in-out 0.5s
+
+          &:hover
+            color: $primary
+
+  .news
+    input
+      @include font-style(14px, left)
+      color: $grey
+      padding: 10px
+      border: none
+      border-bottom: 1px solid $grey
+      outline-width: 0
+
+    button
+      color: $black
+      @include font-style(14px, $medium)
+      @include button(pointer, none, transparent)
+      text-transform: uppercase
+      border-bottom: 1px solid $grey
+      outline-width: 0
+
+  .rights
+    border-top: 1px solid rgba(0, 0, 0, 0.17)
+    color: $black
+    font-size: 16px
+
+    span
+      padding: 0

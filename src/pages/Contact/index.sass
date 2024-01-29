@@ -1,0 +1,50 @@
+.contact
+  .contact-header
+    width: 50%
+
+    h2
+      @include font-style(36px, $semiBold)
+      color: $black
+
+    span
+      @include font-style(16px)
+      color: $grey
+
+  .contact-content
+    margin: 30px
+    width: 60%
+
+    h2
+      @include font-style(24px, $medium)
+      color: $black
+
+    p
+      margin: 0
+      color: $black
+      @include font-style(16px)
+
+    img
+      margin: 10px
+
+  .inputs
+    label
+      @include font-style(16px, $medium)
+      color: $black
+
+    input
+      height: 75px
+      border-radius: 10px
+
+    button
+      @include width(35%, 55px)
+      color: $white
+      background-color: $primary
+      outline-width: 0
+      border: none
+      border-radius: 5px
+      transition: ease-in-out 0.5s
+
+      &:hover
+        background-color: $white
+        color: $primary
+        border: 1px solid $primary

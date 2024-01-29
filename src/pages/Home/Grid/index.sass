@@ -1,0 +1,63 @@
+::-webkit-scrollbar
+  padding: 20px
+  appearance: none
+
+.grid-header
+  p
+    @include font-style(20px, $semiBold)
+    color: #616161
+  h2
+    @include font-style(40px , $bold)
+    color: #3A3A3A
+
+.grid-wrapper
+
+  @include lg
+    width: 100%
+    overflow-x: scroll
+
+.gridClass
+  margin-top: 20px
+  display: grid
+  grid-template-columns: repeat(12, 1fr)
+  grid-template-rows: repeat(8, 1fr)
+  height: 92vh
+  margin-bottom: 50px
+  @include lg
+    display: flex
+    height: auto
+
+  img
+    @include lg
+      width: 200px
+      height: 300px
+    @include width(100%, 100%)
+    width: 100%
+    object-fit: cover
+
+  img:first-child
+    grid-area: 1 / 1 / 5 / 2
+
+  img:nth-child(2)
+    grid-area: 5 / 1 / 9 / 3
+
+  img:nth-child(3)
+    grid-area: 2 / 2 / 5 / 6
+
+  img:nth-child(4)
+    grid-area: 1 / 11 / 6 / 13
+
+  img:nth-child(5)
+    grid-area: 3 / 6 / 7 / 8
+
+  img:nth-child(6)
+    grid-area: 5 / 3 / 8 / 6
+
+  img:nth-child(7)
+    grid-area: 2 / 8 / 6 / 11
+
+  img:nth-child(8)
+    grid-area: 6 / 8 / 9 / 10
+
+  img:nth-child(9)
+    grid-area: 6 / 10 / 8 / 12

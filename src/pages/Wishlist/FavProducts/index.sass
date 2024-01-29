@@ -1,0 +1,47 @@
+.fav-products
+  .fav-titles
+    display: grid
+    align-items: center
+    grid-template-columns: 2fr 1fr 1fr
+    grid-gap: 0.5rem
+
+  .fav-product
+    display: grid
+    align-items: center
+    grid-template-columns: 0fr 2fr 1fr 1fr
+    grid-gap: 0.5rem
+
+    .fav-product-remove > button
+      border: none
+      background-color: transparent
+
+    .fav-product-info
+
+      .fav-img
+        width: 80px
+        height: 80px
+        img
+          @include width(100%, 100%)
+          border-radius: 10px
+          border: 1px solid #B0B0B0
+
+      p
+        @include font-style(17px, 500, center)
+
+    .fav-product-price
+      p
+        @include font-style(18px, 700, left)
+
+    .fav-product-add
+      button
+        color: $white
+        font-size: 17px
+        @include button(pointer, none, $primary)
+        padding: 15px 25px
+        border-radius: 10px
+        transition: ease-in 0.2s
+
+        &:hover
+          background-color: $white
+          border: 1px solid $primary
+          color: $black

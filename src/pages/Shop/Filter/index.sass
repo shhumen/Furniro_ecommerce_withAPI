@@ -1,0 +1,89 @@
+.filter
+  background-color: #F9F1E7
+  padding: 30px
+  @include md
+    font-size: 13px
+
+  .filter-info
+    @include flex(center, null)
+
+    .filter-btn span
+      @include md
+        display: none
+
+    div
+      @include md
+        margin-left: 0
+
+    button
+      @include button(pointer, none, transparent)
+      margin-left: 20px
+
+      .icon
+        @include width(25px, 25px)
+        @include md
+          @include width(20px, 20px)
+
+    .break
+      @include width(2px, 35px)
+      background: #9F9F9F
+      margin: 0 20px
+      @include  lg
+        width: 0
+        margin: 0 10px
+
+  .filter-info-2
+    @include flex(center, null)
+
+    span
+      color: #000
+      margin-left: 15px
+      @include md
+        @include font-style(15px, 400, center)
+
+    .show > select
+      padding: 10px 15px
+      text-align: center
+      color: #9F9F9F
+      margin-left: 15px
+      border: none
+      outline-width: 0
+      @include md
+        padding: 5px 10px
+
+    .sort-by > select
+      text-align: center
+      padding: 10px 30px
+      color: #9F9F9F
+      margin-left: 15px
+      border: none
+      outline-width: 0
+      @include md
+        padding: 5px 10px
+select
+  -webkit-appearance: none
+
+.filters
+  padding: 20px 0
+  background: #F9F1E7
+
+input
+  padding: 7px
+  border-radius: 5px
+  background: #fff
+  border: 1px solid #dcdbdb
+  outline-width: 0
+
+.selects
+  @include md
+    font-size: 13px
+  label
+    @include md
+      font-size: 13px
+  .select
+    margin-bottom: 10px
+
+  .min-price, .max-price
+    width: 100%
+    input
+      width: 100%

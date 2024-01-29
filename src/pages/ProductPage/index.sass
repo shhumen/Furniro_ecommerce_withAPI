@@ -1,0 +1,169 @@
+.product-page
+  .breadcrumb
+    background-color: $light-orange
+    justify-content: start
+    padding: 20px 40px
+    @include md
+      padding: 15px
+
+    .home_s
+      padding: 0 15px
+      color: $grey
+      font-size: 16px
+      text-decoration: none
+
+    .line
+      @include width(1px, 37px)
+      margin-right: 15px
+      background-color: #b8b8b8
+
+  .product-details
+    border-bottom: 1px solid #D9D9D9
+    @include lg
+      margin-top: 35px
+    .product-name h4
+      color: $black
+      font-size: 42px
+
+    .product-price p
+      @include font-style(24px, $medium)
+      color: #9F9F9F
+
+    .reviews
+      .line
+        @include width(1px, 30px)
+        background: #9F9F9F
+
+      .star
+        span
+          color: #9F9F9F
+          font-weight: 600
+
+      .comments
+        margin-left: 18px
+
+        span
+          color: #9F9F9F
+          font-size: 17px
+
+    .desc
+      width: 425px
+      color: $black
+      font-size: 13px
+
+    .sizes,
+    .colors
+      margin-top: 20px
+
+      p
+        margin: 0
+        color: #9F9F9F
+        font-size: 14px
+
+      .size
+        @include width(40px, 40px)
+        margin-right: 10px
+        font-size: 13px
+        border-radius: 5px
+        border: none
+        background-color: $light-orange
+        color: $black
+
+        &:hover
+          background-color: $primary
+          color: $white
+
+      .size
+        &.selected
+          background-color: $primary
+          color: #fff
+          border: 2px solid $primary
+
+    .colors
+
+      .color
+        @include width(30px, 30px)
+        margin-top: 10px
+        margin-right: 15px
+        border-radius: 50%
+        border: none
+
+      .color
+        &.selected svg
+          color: #fff
+
+    .add-to-cart
+      .buttons
+        margin-right: 20px
+        border-radius: 10px
+        border: 1px solid #9F9F9F
+        background: #FFF
+
+        button
+          padding: 13px 22px
+          border: none
+          background-color: transparent
+
+      .add-button
+        button
+          padding: 13px 35px
+          border: 1px solid $black
+          border-radius: 15px
+          background-color: transparent
+
+  .product-description
+    div:nth-child(1), div:nth-child(2)
+      ul
+        list-style: none
+        color: #9F9F9F
+        font-size: 16px
+
+        li
+          margin-bottom: 12px
+          text-transform: capitalize
+
+  .share-icons
+    div
+      padding-right: 25px
+
+      svg
+        color: $black
+        font-size: 30px
+        @include width(20px, 20px)
+
+// review stars 
+
+.ratings
+  position: relative
+  vertical-align: middle
+  display: inline-block
+  color: #f1eded
+  overflow: hidden
+
+.full-stars
+  position: absolute
+  left: 0
+  top: 0
+  white-space: nowrap
+  overflow: hidden
+  color: #FFC700
+
+.empty-stars:before,
+.full-stars:before
+  content: "\2605\2605\2605\2605\2605"
+  font-size: 20pt
+
+.empty-stars:before
+  -webkit-text-stroke: 1px #848484
+
+.full-stars:before
+  -webkit-text-stroke: 1px orange
+
+@-moz-document url-prefix()
+  .full-stars
+    color: #FFC700
+
+/* IE */
+// <!--[if IE]>
+  &
+    color: #FFC700

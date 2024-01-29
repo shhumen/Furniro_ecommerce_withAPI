@@ -1,0 +1,51 @@
+@mixin flex($jsc:null, $direction:null)
+  display: flex
+  justify-content: $jsc
+  flex-direction: $direction
+  align-items: center
+
+@mixin position_absolute($top:null , $bottom:null , $left:null , $right:null)
+  position: absolute
+  top: $top
+  bottom: $bottom
+  right: $right
+  left: $left
+
+@mixin rtl($property, $ltr-value)
+  #{$property}: $ltr-value
+
+@mixin width($width:null , $height:null)
+  width: $width
+  height: $height
+
+@mixin font-style($font-size,$font-weight:null,$text-align:null)
+  font-size: $font-size
+  font-weight: $font-weight
+  text-align: $text-align
+
+@mixin button($cursor,$border,$bg)
+  cursor: $cursor
+  border: $border
+  background-color: $bg
+
+// For responsive
+
+$small-width: 768px
+$medium-width: 992px
+$large-width: 1400px
+
+@mixin small
+  @media (max-width: #{$medium-width})
+  @content
+
+@mixin small-only
+  @media (min-width: #{$small-width}) and (max-width: #{$medium-width - 1px})
+  @content
+
+@mixin medium
+  @media(max-width: #{$medium-width })
+  @content
+
+@mixin large
+  @media (max-width: #{$large-width})
+  @content

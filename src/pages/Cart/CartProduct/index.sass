@@ -1,0 +1,80 @@
+.cart
+  .cart-titles, .cart-item
+    display: grid
+    align-items: center
+    grid-template-columns: 2fr 1fr 1fr 1fr
+    grid-gap: 0.5rem
+
+  .cart-item
+    .cart-total-price button
+      background-color: transparent
+      border: none
+
+
+  .cart-titles
+    background-color: #F9F1E7
+    padding: 15px 10%
+
+    h3
+      @include font-style(16px, $medium)
+      padding: 0 20px
+      color: $black
+
+  .cart-product
+    margin: 40px 0
+    align-items: center
+
+    img
+      width: 100px
+      height: 100px
+
+    h3
+      @include font-style(16px, left)
+      color: $grey
+
+  .cart-quantity
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button
+      -webkit-appearance: none
+      margin: 0
+
+    input[type=number]
+      -moz-appearance: textfield
+
+    .count
+      @include width(32px, 32px)
+      border: 1px solid $grey
+      border-radius: 5px
+      padding: 4px
+
+
+  .cart-total
+    height: 390px
+    background-color: #F9F1E7
+
+    h2
+      color: $black
+      @include font-style(32px, $semiBold, center)
+
+    .cart-total-content
+      .cart-total-title
+        p
+          color: $black
+          @include font-style(16px, $medium)
+
+      .cart-total-price
+        .subtotal-price
+          color: $grey
+          font-size: 16px
+          font-weight: 400
+
+        .total-price
+          color: var(--Primary, #B88E2F)
+          @include font-style(20px, $medium)
+
+    .checkout-btn
+      @include width(65%, 18%)
+      background-color: transparent
+      border: 1px solid $black
+      border-radius: 15px
+      font-size: 20px

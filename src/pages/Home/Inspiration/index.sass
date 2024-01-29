@@ -1,0 +1,95 @@
+.inspiration
+  margin: 50px 0
+  padding: 20px 30px
+  background-color: #FCF8F3
+
+  .inspos
+    margin: auto
+
+  .title > h2
+    @include font-style(40px, 700, left)
+    line-height: 48px
+
+  .desc
+    @include font-style(16px, $medium, left)
+    line-height: 24px
+    color: #616161
+
+  .inspo-btn button
+    @include width(176px, 48px)
+    @include font-style(16px, $semiBold, center)
+    margin-top: 30px
+    background-color: $primary
+    color: $white
+    border: none
+
+.slider
+  overflow: hidden
+  .slick-slide
+    width: 9.5% !important
+    margin-left: 20px
+    img
+      width: 100%
+  .slick-slide.slick-active:not(.slick-current)
+    max-width: 350px !important
+
+  .slick-dots
+    bottom: 0
+
+  .slick-dots
+    position: absolute
+    left: 80px
+    bottom: 20px
+    .slick-active
+      border: 2px solid #B88E2F
+      border-radius: 50%
+      button
+        &::before
+          color: #B88E2F !important
+          transform: translateX(-2px) !important
+  .slick-slider
+    .slick-prev
+      width: 48px
+      height: 48px
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+      display: flex
+      background-color: white !important
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      right: 0px
+      display: none !important
+      &::before
+        color: #B88E2F
+        content: "<"
+        font-weight: bold
+        font-size: 36px
+    .slick-next
+      width: 48px
+      height: 48px
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+      display: flex
+      background-color: white !important
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      right: 0px
+      &::before
+        color: #B88E2F
+        font-weight: bold
+        font-size: 36px
+
+@media (min-width :320px) and (max-width :769px)
+  .slick-slide.slick-active
+    width: 430px !important
+  .slick-dots
+    left: 0
+  .slick-prev
+    display: block !important
+    left: 40px !important
+    background-color: red !important
+  .slider
+    .sliderImg
+      margin: 0 !important
+  .slick-next
+    right: 24px !important

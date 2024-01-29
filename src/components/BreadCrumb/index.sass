@@ -1,0 +1,21 @@
+.header
+  .breadcrumb
+    justify-content: center
+
+    span
+      a
+        @include font-style(16px, $light, null)
+        text-decoration: none
+        color: #000000
+        text-transform: capitalize
+        @include md
+          font-size: 13px
+
+      .separator
+        font-weight: 600
+
+        img
+          @include width(20px, 20px)
+
+    .home_s:nth-child(1)
+      @include font-style(16px, $medium, null)
